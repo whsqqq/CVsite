@@ -14,19 +14,27 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&*%w2=3_tp7h&6(ven+^8^p%o@c47e#d9kdkd1z2z^ia9wgwg2'
+# SECURITY: read secret key from environment in production
+# Keep a default for local development only. Replace with a secure value in production.
+SECRET_KEY = os.environ.get(
+    'DJANGO_SECRET_KEY',
+    'django-insecure-&*%w2=3_tp7h&6(ven+^8^p%o@c47e#d9kdkd1z2z^ia9wgwg2',
+)
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# Read DEBUG from env (set to 'True' for debugging on server if needed)
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['mikhailkondratev.online', 'www.mikhailkondratev.online']
+# ALLOWED_HOSTS can be set via comma-separated env var, fallback to the previous domains
+allowed = os.environ.get(
+    'DJANGO_ALLOWED_HOSTS',
+    'mikhailkondratev.online,www.mikhailkondratev.online,mikhailkondratev.ru,www.mikhailkondratev.ru',
+)
+ALLOWED_HOSTS = [h.strip() for h in allowed.split(',') if h.strip()]
 
 
 # Application definition
@@ -43,6 +51,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    # Whitenoise serves static files in production without extra webserver config
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -73,11 +83,27 @@ WSGI_APPLICATION = 'CVsite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.dummy'
+# Database configuration
+# By default use SQLite for simple deployments. To use MySQL, set MYSQL_NAME/MYSQL_USER/MYSQL_PASSWORD/MYSQL_HOST
+if os.environ.get('MYSQL_NAME'):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.environ.get('MYSQL_NAME'),
+            'USER': os.environ.get('MYSQL_USER'),
+            'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
+            'HOST': os.environ.get('MYSQL_HOST', 'localhost'),
+            'PORT': os.environ.get('MYSQL_PORT', ''),
+        }
     }
-}
+else:
+    # SQLite fallback (local development / simple hosting)
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 
@@ -114,6 +140,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # сюда будем собирать статику
+
+# Use Whitenoise storage to serve compressed files in production
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
