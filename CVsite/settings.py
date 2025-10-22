@@ -35,7 +35,7 @@ allowed = os.environ.get(
     'mikhailkondratev.online,www.mikhailkondratev.online,mikhailkondratev.ru,www.mikhailkondratev.ru',
 )
 ALLOWED_HOSTS = [h.strip() for h in allowed.split(',') if h.strip()]
-
+    
 
 # Application definition
 
@@ -85,26 +85,15 @@ WSGI_APPLICATION = 'CVsite.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 # Database configuration
 # By default use SQLite for simple deployments. To use MySQL, set MYSQL_NAME/MYSQL_USER/MYSQL_PASSWORD/MYSQL_HOST
-if os.environ.get('MYSQL_NAME'):
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.environ.get('MYSQL_NAME'),
-            'USER': os.environ.get('MYSQL_USER'),
-            'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
-            'HOST': os.environ.get('MYSQL_HOST', 'localhost'),
-            'PORT': os.environ.get('MYSQL_PORT', ''),
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'u3303092_default',
+        'USER': 'u3303092_default',
+        'PASSWORD': '8hy72eiTqxfHLJR8',
+        'HOST': 'localhost',
     }
-else:
-    # SQLite fallback (local development / simple hosting)
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-
+}
 
 
 # Password validation
@@ -139,7 +128,8 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # сюда будем собирать статику
+STATIC_ROOT='static/'
+ # сюда будем собирать статику
 
 # Use Whitenoise storage to serve compressed files in production
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
