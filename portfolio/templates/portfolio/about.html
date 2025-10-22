@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Mikhail Kondratyev</title>
+        <link rel="stylesheet" href="https://use.typekit.net/[YOUR-KIT-CODE].css">
+    <style>
+      @font-face {
+        font-family: 'Sofia Sans Local';
+        src: url('{% static "portfolio/fonts/SofiaSans-Regular.otf" %}') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .about-text10,
+      .about-text16,
+      .about-text17,
+      .about-text24,
+      .about-text25 {
+        font-family: 'Sofia Sans Local', sans-serif !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
+        font-synthesis: none !important;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: "ss01" on !important;
+        -webkit-font-feature-settings: "ss01" on !important;
+        -moz-font-feature-settings: "ss01" on !important;
+      }
+    </style>
+
+    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'portfolio/css/about.css' %}" />
+  </head>
+
+  <body>
+    <div class="about-container1">
+      <div class="about-about1">
+        <div class="about-desktop"></div>
+
+        <img src="{% static 'portfolio/images/image2144-cgwq-600h.png' %}" alt="image2144" class="about-image" />
+
+        <span class="about-text10">
+          <span>на рассвете своей карьеры я создал проект sea urchin, в котором я исследую</span><br/>
+          <span>звучание пост-рока, пост-панка</span><br/>
+          <span>и эмбиента. под его эгидой родился мой первый сольный альбом forecast, а также музыка для немого кино джальма. стоит также отметить, что будучи приверженцем аналоговых инструментов, мне не чужды практики записи с синтезированной музыкой, именно так родился проект “прогулка по сознанию”, который, впоследствии, стал выставляться в пространстве “окно”</span>
+        </span>
+
+        <span class="about-text16">
+          мои проекты также обращаются к концепциям жизни и смерти, трансформации и памяти. через звук, который в большей части вдохновлен пост-роком и психоделикой, я создаю интимные, гипнотические композиции, в которых каждый элемент — от легчайшей вибрации до мощной природной силы — становится маркером присутствия и мимолётности.
+        </span>
+
+        <span class="about-text17">
+          <span>моя практика исследует взаимосвязь</span><br/>
+          <span>между природой, временем и человеческим восприятием через звук. я работаю с погодой, движением воздуха, сейсмо-активностями</span><br/>
+          <span>и другими природными явлениями, превращая их в пейзажи, которые отражают хрупкость жизни. звуки ветра, дождя, земной вибрации и шумов в сочетании с музыкой из материалов, которые нас окружают, становятся средством для погружения, позволяя слушателю ощутить глубину пространства и текучесть времени.</span>
+        </span>
+
+        <div class="about-topics">
+          <span class="about-text24">bio:</span>
+          <span class="about-text25">artist statement:</span>
+        </div>
+
+        <div class="about-header">
+          <div class="about-nav-left">
+            <a href="/">
+              <img
+                src="{% static 'portfolio/images/mikhailkondratev2144-gf4k.svg' %}"
+                alt="mikhailkondratev2144"
+                class="about-mikhailkondratev"
+              />
+            </a>
+          </div>
+          <div class="about-nav-right">
+            <a href="/cv/">
+              <img src="{% static 'portfolio/images/cv2144-ht7.svg' %}" alt="cv2144" class="about-cv" />
+            </a>
+            <a href="/about/" style="position: relative;">
+              <img src="{% static 'portfolio/images/about2144-6kjd.svg' %}" alt="about2144" class="about-about2" />
+              <img src="{% static 'portfolio/images/underscore2144-bk4d.svg' %}" alt="underscore2144" class="about-underscore" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

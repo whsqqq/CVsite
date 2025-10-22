@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mikhail Kondratev</title>
+
+    <style>
+      @font-face {
+        font-family: 'Sofia Sans Local';
+        src: url('{% static "portfolio/fonts/SofiaSans-Regular.otf" %}') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .home-text1,
+      .home-text5,
+      .home-text9 {
+        font-family: 'Sofia Sans Local', sans-serif !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
+        font-synthesis: none !important;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: "ss01" on !important;
+        -webkit-font-feature-settings: "ss01" on !important;
+        -moz-font-feature-settings: "ss01" on !important;
+      }
+    </style>
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'portfolio/css/index.css' %}" />
+  </head>
+
+  <body>
+    <div class="home-container1">
+      <div class="home-home">
+        <img
+          alt="background"
+          src="{% static 'portfolio/images/background2144-19ts-1500w.png' %}"
+          class="home-background"
+        />
+        <div class="home-header">
+          <a href="/cv/">
+            <img
+              alt="cv"
+              src="{% static 'portfolio/images/cv2144-ht7.svg' %}"
+              class="home-cv"
+            />
+          </a>
+          <a href="/about/">
+            <img
+              alt="about"
+              src="{% static 'portfolio/images/about2144-hfur.svg' %}"
+              class="home-about"
+            />
+          </a>
+        </div>
+
+        <span class="home-text1">
+          <span>sound-artist</span><br />
+          <span>and audio-engineer</span>
+        </span>
+
+        <span class="home-text5">
+          <span>mikhail kondratev</span><br /><br />
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
