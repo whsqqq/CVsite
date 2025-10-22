@@ -21,3 +21,5 @@ media/
 
 # Secrets
 *.env
+
+*/migrations/

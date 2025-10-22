@@ -127,9 +127,8 @@ USE_I18N = True
 USE_TZ = True
 
 
-STATIC_URL = '/static/'
+STATIC_URL ='/static/'
 STATIC_ROOT='static/'
- # сюда будем собирать статику
 
 # Use Whitenoise storage to serve compressed files in production
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
