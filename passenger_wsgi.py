@@ -1,7 +1,7 @@
 import os, sys
 
-sys.path.insert(0, '/var/www/u3303092/data/www/mikhailkondratev.ru/CVsite')
-sys.path.insert(1, '/var/www/u3303092/data/djangoenv/lib/python3.10/site-packages')
+sys.path.insert(0, '/var/www/u3303092/data/www/mikhailkondratev.ru/CVsite/')
+sys.path.insert(1, '/var/www/u3303092/data/djangoenv/lib/python3.10//site-packages')
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'CVsite.settings'
 
