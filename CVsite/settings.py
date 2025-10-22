@@ -72,13 +72,12 @@ WSGI_APPLICATION = 'CVsite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.dummy'
     }
 }
+
 
 
 # Password validation
@@ -116,6 +115,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/var/www/u3303092/data/CVsite/staticfiles'
 STATICFILES_DIRS = [BASE_DIR / "portfolio" / "static"]
 
 
