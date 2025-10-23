@@ -1,69 +1,65 @@
 .home-container1 {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   display: flex;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
 }
  
 .home-home {
   width: 100%;
-  height: 100%;
+  height: 900px;
   display: flex;
   overflow: hidden;
   position: relative;
-  margin: 0;
-  padding: 0;
+  align-items: flex-start;
+  flex-shrink: 0;
   background-color: rgba(255, 255, 255, 1);
 }
  
 .home-background {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 899px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  object-fit: cover;
-  display: block;
 }
  
 .home-header {
   top: 26px;
-  right: 71px;
-  width: 166px;
-  height: 14px;
+  left: 1203px;
+  width: 165.9679412841797px;
+  height: 13.900156021118164px;
   display: flex;
   position: absolute;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 100px;
+  align-items: flex-start;
+  flex-shrink: 1;
 }
  
 .home-cv {
+  top: 3.66015625px;
+  left: 0px;
   width: 18px;
   height: 10px;
-  position: relative;
+  position: absolute;
   box-sizing: content-box;
 }
  
 .home-about {
+  top: 0px;
+  left: 117.719970703125px;
   width: 48px;
   height: 14px;
-  position: relative;
+  position: absolute;
   box-sizing: content-box;
 }
  
 .home-text1 {
-  top: 144px;
+  top: 162px;
   left: 257px;
   color: rgba(255, 255, 255, 1);
-  width: 555px;
+  width: 299px;
   height: auto;
   position: absolute;
   font-size: 32px;
@@ -77,7 +73,7 @@
 }
  
 .home-text5 {
-  top: 85px;
+  top: 120px;
   left: 138px;
   color: rgba(255, 255, 255, 1);
   width: 555px;

@@ -1,113 +1,425 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="english">
   <head>
-    <meta charset="UTF-8" />
+    <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
-    <title>CV — Mikhail Kondratev</title>
-        <style>
-      @font-face {
-        font-family: 'Sofia Sans Local';
-        src: url('{% static "portfolio/fonts/SofiaSans-Regular.otf" %}') format('opentype');
-        font-weight: 400;
-        font-style: normal;
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: 'Sofia Sans', sans-serif;
+        font-size: 16px;
       }
-      
-      .cv-text10,
-      .cv-text13,
-      .cv-text16,
-      .cv-text19,
-      .cv-text22,
-      .cv-text25,
-      .cv-text28,
-      .cv-text31,
-      .cv-text34,
-      .cv-text35 {
-        font-family: 'Sofia Sans Local', sans-serif !important;
-        font-weight: 400 !important;
-        font-style: normal !important;
-        font-synthesis: none !important;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-feature-settings: "ss01" on !important;
-        -webkit-font-feature-settings: "ss01" on !important;
-        -moz-font-feature-settings: "ss01" on !important;
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
       }
     </style>
-
-    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}" />
-    <link rel="stylesheet" href="{% static 'portfolio/css/cv.css' %}" />
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'portfolio/css/fonts.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
   </head>
-
   <body>
-    <div class="cv-container1">
-      <div class="cv-cv1">
-        <div class="cv-desktop"></div>
-        <img
-          alt="image2144"
-          src="{% static 'portfolio/images/image2144-nd2f-600h.png' %}"
-          class="cv-image"
-        />
+    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}" />
+    <div>
+      <link href="{% static 'portfolio/css/cv.css' %}" rel="stylesheet" />
 
-        <!-- New content imported from cv-new.html (keeps project structure) -->
-        <span class="cv-text13">— blackcrows саунд-айдентика</span>
-        <span class="cv-text16">— stardew valley sound remake</span>
-        <span class="cv-text22">— super smash bros. ultimate sound remake</span>
-        <span class="cv-text28">— paperman sound remake</span>
-
-        <div class="cv-commercials">
-          <div class="cv-item">
-            <span class="cv-text19">commercial:</span>
-            <!-- placeholders for project blocks; styles live in existing CSS -->
-          </div>
+      <div class="cv-container1">
+        <div class="cv-cv1">
+          <img
+            src="{% static 'portfolio/images/image2144-70lq-700h.png' %}"
+            alt="image2144"
+            class="cv-image"
+          />
+          <img
+            src="{% static 'portfolio/images/rectangle12177-4o5h-200h.png' %}"
+            alt="Rectangle12177"
+            class="cv-rectangle1"
+          />
+          <img
+            src="{% static 'portfolio/images/underscore2144-zpj.svg' %}"
+            alt="underscore2144"
+            class="cv-underscore"
+          />
+          <span class="cv-text10">
+            <span>— blackcrows саунд-айдентика</span>
+            <br />
+          </span>
+          <span class="cv-text13">
+            <span>— stardew valley sound remake</span>
+            <br />
+          </span>
+          <span class="cv-text16">
+            <span>— super smash bros. ultimate sound remake</span>
+            <br />
+          </span>
+          <span class="cv-text19">
+            <span>— paperman sound remake</span>
+            <br />
+          </span>
+          <span class="cv-text22">commercial:</span>
+          <img
+            src="{% static 'portfolio/images/bandcamplogosvgrepocom12177-r22p.svg' %}"
+            alt="bandcamplogosvgrepocom12177"
+            class="cv-bandcamplogosvgrepocom1"
+          />
+          <img
+            src="{% static 'portfolio/images/bandcamplogosvgrepocom22177-fn7.svg' %}"
+            alt="bandcamplogosvgrepocom22177"
+            class="cv-bandcamplogosvgrepocom2"
+          />
+          <img
+            src="{% static 'portfolio/images/bandcamplogosvgrepocom32177-u37j.svg' %}"
+            alt="bandcamplogosvgrepocom32177"
+            class="cv-bandcamplogosvgrepocom3"
+          />
+          <span class="cv-text23">bandcamp</span>
+          <span class="cv-text24">bandcamp</span>
+          <span class="cv-text25">bandcamp</span>
+          <span class="cv-text26">
+            «джальма»&nbsp;— один из&nbsp;важных, но&nbsp;в&nbsp;то&nbsp;же
+            время забытых фильмов эпохи советского немого кино, обращённых
+            к&nbsp;проблемам социальной справедливости и&nbsp;преодоления
+            национальной вражды. для показа будет собран атмосферный звуковой
+            ландшафт, подкрепляющий визуальный язык фильма и вдохновленный
+            такими классическими жанрами, как психоделик-рок, пост-рок и
+            дроун-эмбиент.
+          </span>
+          <span class="cv-text27">
+            <span>— джальма</span>
+            <br />
+          </span>
+          <span class="cv-text30">
+            <span>совместный проект с лаврухиным алексеем</span>
+            <br />
+            <span>
+              современный человек ежедневно сталкивается с&nbsp;огромным потоком
+              информации, с&nbsp;которым многим тяжело справляться.
+              он&nbsp;порождает тревожные состояния. многоканальная звуковая
+              инсталляция «прогулка по&nbsp;сознанию» призвана столкнуть
+              слушателя с&nbsp;его внутренним миром и&nbsp;окунуть его
+              в&nbsp;противостояние тревоги и&nbsp;чистоты&nbsp;разума.
+            </span>
+            <br />
+            <span>выставлялась в: окно</span>
+            <br />
+            <span> </span>
+          </span>
+          <span class="cv-text38">
+            <span>— прогулка по сознанию</span>
+            <br />
+          </span>
+          <span class="cv-text41">
+            <span>дебютный альбом проекта sea urchin,</span>
+            <br />
+            <span>в котором переживания о непонятном</span>
+            <br />
+            <span>
+              “завтра”, которое может и не наступить, накладываются на
+              творческий
+            </span>
+            <br />
+            <span>
+              кризис. в трёх треках альбома заключён цикл тревоги, паники и
+              принятия, с надеждой, что прогноз который ты построил у себя в
+              голове — обязательно случится  
+            </span>
+            <br />
+          </span>
+          <span class="cv-text50">
+            <span>— sea urchin – forecast</span>
+            <br />
+          </span>
+          <span class="cv-text53">artist:</span>
+          <img
+            src="{% static 'portfolio/images/mikhailkondratev2144-h2al.svg' %}"
+            alt="mikhailkondratev2144"
+            class="cv-mikhailkondratev"
+          />
+          <img src="{% static 'portfolio/images/cv2144-6jf5.svg' %}" alt="cv2144" class="cv-cv2" />
+          <img
+            src="{% static 'portfolio/images/about2144-ifsp.svg' %}"
+            alt="about2144"
+            class="cv-about"
+          />
+          <span class="cv-text54">
+            <span>
+              в рамках этого проекта я воссоздавал звуки культового файтинга
+              “super smash bros. ultimate”. в игре присутствует 81 боец, и почти
+              каждый из них имеет свои уникальные звуковые ассеты
+            </span>
+            <br />
+            <span>с определенным характером звучания</span>
+          </span>
+          <span class="cv-text58">ознакомиться</span>
+          <span class="cv-text59">
+            <span>проект по переизобретению звуков для</span>
+            <br />
+            <span>
+              симулятора фермерской жизни “stardew valley”. переозвучка сочетает
+              в себе как и реалистичные звуки, так и уход в ретро тематику, при
+              этом не создавая ощущения, будто они из двух разных миров. в ходе
+              проекта был создан как саундтрек, так и сами звуковые ассеты
+            </span>
+          </span>
+          <span class="cv-text63">ознакомиться</span>
+          <span class="cv-text64">
+            <span>
+              blackcrows™&nbsp;— бренд-производитель лыж для фрирайда
+              и&nbsp;спортивной атрибутики. саунд-айдентика для этого бренда
+              сочетает в&nbsp;себе эмбиент и&nbsp;дроун композиции, которые
+              максимально позволяют прочувствовать момент свободы на&nbsp;горном
+              склоне.
+            </span>
+            <br />
+          </span>
+          <span class="cv-text67">ознакомиться</span>
+          <span class="cv-text68">
+            <span>
+              проект по переозвучке короткометражного фильма paperman от студии
+              disney. в ходе проекта все ассеты и звуковые элементы создавались
+              с нуля, что позволило создать уместный и понятный звуковой
+              ландшафт, который не выбивается из визуала
+            </span>
+            <br />
+          </span>
+          <span class="cv-text71">ознакомиться</span>
+          <span class="cv-text72">
+            <span>— детский профиль okko</span>
+            <br />
+          </span>
+          <span class="cv-text75">
+            <span>— х/ф “холостой”</span>
+            <br />
+          </span>
+          <span class="cv-text78">звук на площадке, 1sa</span>
+          <span class="cv-text79">звук на площадке, 1sa</span>
+          <span class="cv-text80">
+            <span>— red brick wall: саунд дизайн игровых проектов</span>
+            <br />
+          </span>
+          <span class="cv-text83">
+            в ходе проекта с нуля создавались звуковые ассеты для нескольких игр
+          </span>
         </div>
-
-        <span class="cv-text31">— джальма — один из важных, но в то же время забытых фильмов эпохи советского немого кино...</span>
-
-        <span class="cv-text25">— прогулка по сознанию — совместный проект с Лаврухиным Алексеем; многоканальная звуковая инсталляция.</span>
-
-        <!-- sea urchin — forecast turned into a link to Bandcamp -->
-        <span class="cv-text31"><a href="https://sunflowerjuice.bandcamp.com/album/forecast" target="_blank" rel="noopener">— sea urchin — forecast</a></span>
-
-        <div class="cv-dates">
-          <span class="cv-text34">2024:</span>
-          <span class="cv-text35">2025:</span>
-        </div>
-
-        <div class="cv-header">
-          <div class="cv-nav-left">
-            <a href="/">
-              <img
-                alt="mikhailkondratev2144"
-                src="{% static 'portfolio/images/mikhailkondratev2144-zud.svg' %}"
-                class="cv-mikhailkondratev"
-              />
-            </a>
+        <a href="https://play.teleporthq.io/signup" class="cv-link">
+          <div aria-label="Sign up to TeleportHQ" class="cv-container2">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 19 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="cv-icon1"
+            >
+              <path
+                d="M9.1017 4.64355H2.17867C0.711684 4.64355 -0.477539 5.79975 -0.477539 7.22599V13.9567C-0.477539 15.3829 0.711684 16.5391 2.17867 16.5391H9.1017C10.5687 16.5391 11.7579 15.3829 11.7579 13.9567V7.22599C11.7579 5.79975 10.5687 4.64355 9.1017 4.64355Z"
+                fill="#B23ADE"
+              ></path>
+              <path
+                d="M10.9733 12.7878C14.4208 12.7878 17.2156 10.0706 17.2156 6.71886C17.2156 3.3671 14.4208 0.649963 10.9733 0.649963C7.52573 0.649963 4.73096 3.3671 4.73096 6.71886C4.73096 10.0706 7.52573 12.7878 10.9733 12.7878Z"
+                fill="#FF5C5C"
+              ></path>
+              <path
+                d="M17.7373 13.3654C19.1497 14.1588 19.1497 15.4634 17.7373 16.2493L10.0865 20.5387C8.67402 21.332 7.51855 20.6836 7.51855 19.0968V10.5141C7.51855 8.92916 8.67402 8.2807 10.0865 9.07221L17.7373 13.3654Z"
+                fill="#2874DE"
+              ></path>
+            </svg>
+            <span class="cv-text84">Built in TeleportHQ</span>
           </div>
-          <div class="cv-nav-right">
-            <a href="/cv/" style="position: relative;">
-              <img
-                alt="cv2144"
-                src="{% static 'portfolio/images/cv2144-esh.svg' %}"
-                class="cv-cv2"
-              />
-              <img
-                alt="underscore2144"
-                src="{% static 'portfolio/images/underscore2144-ada.svg' %}"
-                class="cv-underscore"
-              />
-            </a>
-            <a href="/about/">
-              <img
-                alt="about2144"
-                src="{% static 'portfolio/images/about2144-9668.svg' %}"
-                class="cv-about"
-              />
-            </a>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
   </body>

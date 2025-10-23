@@ -1,0 +1,7 @@
+/* Font definitions */
+@font-face {
+    font-family: 'Sofia Sans';
+    src: url('../fonts/SofiaSans-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}

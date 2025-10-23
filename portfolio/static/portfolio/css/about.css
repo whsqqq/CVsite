@@ -1,187 +1,171 @@
 .about-container1 {
   width: 100%;
   display: flex;
+  overflow: auto;
   min-height: 100vh;
   align-items: center;
   flex-direction: column;
-  position: relative;
 }
  
 .about-about1 {
   width: 100%;
-  min-height: 100vh;
+  height: 1100px;
   display: flex;
+  overflow: hidden;
   position: relative;
   align-items: flex-start;
   flex-shrink: 0;
-  padding-bottom: 50px;
   background-color: rgba(255, 255, 255, 1);
 }
  
 .about-desktop {
-  width: 100%;
-  min-height: 1100px;
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 1100px;
   display: flex;
-  position: relative;
+  overflow: hidden;
+  position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
   background-color: rgba(255, 255, 255, 1);
 }
  
-.about-image {
-  top: 188px;
-  left: 849px;
-  width: 400px;
-  height: 533px;
-  position: absolute;
-}
- 
-.about-underscore {
-  width: 48px;
-  height: 2px;
-  position: absolute;
-  top: 18px;
-  left: 0;
-  box-sizing: content-box;
-}
- 
 .about-text10 {
-  top: 706px;
-  left: 256px;
+  top: 159px;
+  left: 140px;
   color: rgba(0, 0, 0, 1);
   width: 375px;
   height: auto;
   position: absolute;
   font-size: 20px;
+  font-style: Regular;
   text-align: left;
-  font-family: "Sofia Sans", sans-serif;
+  font-family: Sofia Sans;
   font-weight: 400;
-  font-variation-settings: 'wght' 400;
-  font-feature-settings: "ss01";
-  -webkit-font-feature-settings: "ss01";
-  -moz-font-feature-settings: "ss01";
-  font-synthesis: none;
-  line-height: normal;
+  line-height: 99.93499517440796%;
   font-stretch: normal;
   text-decoration: none;
 }
  
 .about-text16 {
-  top: 483px;
-  left: 256px;
+  top: 711px;
+  left: 140px;
   color: rgba(0, 0, 0, 1);
   width: 419px;
   height: auto;
   position: absolute;
   font-size: 20px;
+  font-style: Regular;
   text-align: left;
-  font-family: "Sofia Sans";
+  font-family: Sofia Sans;
   font-weight: 400;
-  font-feature-settings: "ss01" on;
   line-height: 99.98000264167786%;
   font-stretch: normal;
   text-decoration: none;
 }
  
 .about-text17 {
-  top: 219px;
-  left: 256px;
+  top: 483px;
+  left: 140px;
   color: rgba(0, 0, 0, 1);
   width: 419px;
   height: auto;
   position: absolute;
   font-size: 20px;
+  font-style: Regular;
   text-align: left;
-  font-family: "Sofia Sans";
+  font-family: Sofia Sans;
   font-weight: 400;
-  font-feature-settings: "ss01" on;
   line-height: 99.98000264167786%;
   font-stretch: normal;
   text-decoration: none;
 }
  
-.about-topics {
-  top: 188px;
-  left: 137px;
-  width: 524px;
-  height: 513px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-}
- 
 .about-text24 {
-  top: 487px;
+  top: 135px;
+  left: 21px;
   color: rgba(0, 0, 0, 1);
   width: 268px;
   height: auto;
   position: absolute;
   font-size: 20px;
+  font-style: Regular;
   text-align: left;
-  font-family: "Sofia Sans";
+  font-family: Sofia Sans;
   font-weight: 400;
-  font-feature-settings: "ss01" on;
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
 }
  
 .about-text25 {
+  top: 453px;
+  left: 21px;
   color: rgba(0, 0, 0, 1);
   width: 524px;
   height: auto;
   position: absolute;
   font-size: 20px;
+  font-style: Regular;
   text-align: left;
-  font-family: "Sofia Sans";
+  font-family: Sofia Sans;
   font-weight: 400;
-  font-feature-settings: "ss01" on;
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
 }
  
-.about-header {
-  width: 100%;
-  height: 14px;
-  display: flex;
-  position: fixed;
-  top: 26px;
-  padding: 0 71px;
-  justify-content: space-between;
-  z-index: 100;
+.about-rectangle1 {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 68px;
+  position: absolute;
 }
-
-.about-nav-left {
-  display: flex;
-  align-items: center;
-}
-
-.about-nav-right {
-  display: flex;
-  align-items: center;
-  gap: 100px;
-}
-
-.about-nav-right a {
-  position: relative;
-  display: inline-block;
+ 
+.about-underscore {
+  top: 43px;
+  left: 1322px;
+  width: 48px;
+  height: 2px;
+  position: absolute;
+  box-sizing: content-box;
 }
  
 .about-mikhailkondratev {
+  top: 26.2001953125px;
+  left: 21.35693359375px;
   width: 151px;
   height: 14px;
+  position: absolute;
+  box-sizing: content-box;
 }
  
 .about-cv {
+  top: 30px;
+  left: 1203px;
   width: 18px;
   height: 10px;
+  position: absolute;
+  box-sizing: content-box;
 }
  
 .about-about2 {
+  top: 26.33984375px;
+  left: 1322px;
   width: 48px;
   height: 14px;
+  position: absolute;
+  box-sizing: content-box;
+}
+ 
+.about-image {
+  top: 132px;
+  left: 849px;
+  width: 452px;
+  height: 602px;
+  position: absolute;
 }
  
 .about-link {
